@@ -1,0 +1,3 @@
+#!/bin/bash
+# export OPENAI_API_KEY=sk-...
+openai api fine_tunes.create -t $1 -m ada --n_epochs 4
