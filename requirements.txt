@@ -1,0 +1,20 @@
+black==22.6.0
+brotlipy==0.7.0
+cookiecutter==1.7.3
+flit-core==3.6.0
+importlib-metadata==4.11.3
+importlib-resources==5.2.0
+ipywidgets==7.6.5
+isort==5.9.3
+openai==0.27.2
+pyopenssl==23.0.0
+pysocks==1.7.1
+pytest==7.1.2
+python-dotenv==1.0.0
+scikit-learn==1.2.2
+seaborn==0.12.2
+sklearn==0.0.post1
+torch==1.13.1
+unidecode==1.2.0
+wandb==0.13.11
+-e .
