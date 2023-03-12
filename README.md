@@ -45,14 +45,14 @@ Loss used : `BCELoss`
 
 Optimizer : `Adams`, `lr=3e-4`
 
-> Due to the low number of sample for certain labels their classifiers under-perform, potential solution would be to balance the number of samples for each classifier individually (not train on the whole data).
+> Due to the low number of samples for certain labels their classifiers under-perform, potential solution would be to balance the number of samples for each classifier individually (not train on the whole data).
 
 ### **Few-shot classification using GPT-3**
 ### **Fine-tuning GPT-3**
 ### **Divide-and-conquer with decision trees**
 
 ## Evaluation
-The model is evaluated using precision, recall, and F1-score metrics. The evaluation results are reported for the validation and test sets.
+The different models are evaluated with respect to their precision, recall, F1-score and accuracy.
 
 ## File Structure
 The project has the following file structure:
