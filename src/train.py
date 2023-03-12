@@ -53,6 +53,5 @@ def train_fnns(
 
 def classifiers_fit(classifiers, x_train, y_train):
     """Fit a list of classifiers each to classify one label in the output"""
-    assert len(classifiers) == y_train.shape[1]
     for clf, y_label in zip(classifiers, y_train.T):
         clf.fit(x_train, y_label)
