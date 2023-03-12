@@ -38,6 +38,9 @@ The model is evaluated using precision, recall, and F1-score metrics. The evalua
 The project has the following file structure:
 
 ```bash
+├── data
+│   ├── processed
+│   └── raw
 ├── notebooks
 │   ├── main.ipynb
 ├── scripts
@@ -75,6 +78,7 @@ OPENAI_API_KEY=sk- ...
 Run `notebooks/main.ipynb`
 
 ### Fine-tuning 
+`TODO`
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
