@@ -18,18 +18,18 @@ def get_embedding(text):
     return response["data"][0]["embedding"]
 
 
-def GPT_3(prompt):
+def GPT_3(prompt, model="text-davinci-003"):
     """
     Get the response of GPT-3
     """
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        engine=model,
         prompt=prompt,
         max_tokens=100,
         temperature=0.7,
         stop=["]"],
     )
-    return "[" + response["choices"][0]["text"] + "]"  # add brackets to make it a list
+    return response["choices"][0]["text"]  # add brackets to make it a list
 
 
 class DivideAndConquerFNN(nn.Module):
