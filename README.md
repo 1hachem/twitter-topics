@@ -29,7 +29,27 @@ The raw data used in this project is a pickled file containing tweets with their
 The preprocessing step includes removing irrelevant features from the data and one-hot encoding the topics. The processed data is then embedded using pre-trained language models.
 
 ## Models
-The model used for this task is a feed-forward neural network. The input to the model is the embedding, and the output is a binary vector indicating the presence or absence of each topic.
+We run multiple experiments with different models :
+
+### **Divide-and-conquer (one vs rest) feed-forward neural networks on top of ada-002**
+
+We train multiple neural-networks each with the task to binary classify a specific label. 
+
+Input : `ada-002 embeddings`, `dimension=1536`
+
+Hidden layer : `dimension=16`
+
+Activations : `middle : ReLU`, `final : Sigmoid` 
+
+Loss used : `BCELoss`
+
+Optimizer : `Adams`, `lr=3e-4`
+
+> Due to the low number of sample for certain labels their classifiers under-perform, potential solution would be to balance the number of samples for each classifier individually (not train on the whole data).
+
+### **Few-shot classification using GPT-3**
+### **Fine-tuning GPT-3**
+### **Divide-and-conquer with decision trees**
 
 ## Evaluation
 The model is evaluated using precision, recall, and F1-score metrics. The evaluation results are reported for the validation and test sets.
