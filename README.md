@@ -78,7 +78,27 @@ OPENAI_API_KEY=sk- ...
 Run `notebooks/main.ipynb`
 
 ### Fine-tuning 
-`TODO`
+After saving the training data as a json file, run :
+```bash
+openai tools fine_tunes.prepare_data -f /path/to/json
+```
+example json file :
+
+```json
+[{"prompt":"tweet here", "completion":"topics here"}]
+```
+start fine-tuning your model
+
+```bash
+openai api fine_tunes.create -t -m ada --n_epochs 1
+```
+
+visualize your fine-tuning using wandb :
+
+```bash
+openai sync wandb
+```
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
